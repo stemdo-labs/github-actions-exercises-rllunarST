@@ -9,4 +9,4 @@ jobs:
     runs-on: labs-runner
     steps:
       - name: Imprimir mensaje
-      - run: echo "Hello, World!"
+        run: echo "Hello, World!"
