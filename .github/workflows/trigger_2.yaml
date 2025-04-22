@@ -1,0 +1,12 @@
+name: "Trigger para pushs - RLLM"
+
+on:
+  push:
+    branches:
+      - "soluciones-rllm"
+jobs:
+  build:
+    runs-on: labs-runner
+    steps:
+      - name: Imprimir mensaje
+      - run: echo "Hello, World!"
