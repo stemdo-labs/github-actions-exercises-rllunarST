@@ -1,0 +1,13 @@
+name: "Trigger diario - RLLM"
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # Todos los días a las 12:00 UTC
+
+jobs:
+  scheduled-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Imprimir mensaje
+        run: echo "Scheduled job executed!"
