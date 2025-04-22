@@ -1,0 +1,12 @@
+name: "Trigger de pull request en una rama - RLLM"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - soluciones-rllm
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Este es un trigger en la rama main"
