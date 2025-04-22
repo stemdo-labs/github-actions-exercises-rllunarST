@@ -37,4 +37,11 @@ Como podremos ver en el 'steps' del job, se evalúa el input `confirm` con un co
 
 Ahora probaremos el workflow, lo subiremos a nuestro repositorio y en el apartado de Github Actions lo iniciaremos manualmente, veremos que ahora podemos confirmar el workflow. Podemos verlo en la siguiente imagen:
 
+![Vista del workflow en github actions](../../../datos/imgs/dispatch3_1.png)
+
+Ahora una vez que lo ejecutamos, podemos ver el resultado en la consola de ejecución del workflow.
+
+![Resultado del workflow](../../../datos/imgs/dispatch3_2.png)
+
+Con esto podemos ver que el workflow se ejecuta correctamente y dependiendo de la confirmación que le demos, se imprimirá un mensaje distinto.
 
