@@ -7,6 +7,6 @@ on:
       - soluciones-rllm
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: labs-runner
     steps:
       - run: echo "Este es un trigger en la rama main"
