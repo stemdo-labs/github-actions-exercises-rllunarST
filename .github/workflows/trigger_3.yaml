@@ -1,0 +1,13 @@
+name: "Creando un nuevo Issue - RLLMe"
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  issue-created:
+    runs-on: labs-runner
+
+    steps:
+      - name: Imprimir mensaje
+        run: echo "Has creado un nuevo issue en el repositorio"
