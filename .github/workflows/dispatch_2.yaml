@@ -18,4 +18,4 @@ jobs:
 
     steps:
       - name: Mostrando entorno seleccionado
-        run: echo "EL entorno seleccionado: ${{ github.event.inputs.environment }}"
+        run: echo "${{ github.event.inputs.environment }}"
