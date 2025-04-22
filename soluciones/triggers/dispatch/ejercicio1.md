@@ -32,3 +32,8 @@ Como podemos ver, el workflow se activa manualmente con workflow_dispatch y soli
 
 Podemos ver el resultado del siguiente dispatch en la siguiente imagen:
 
+![Solicitud del workflow en Github](../../../datos/imgs/dispatch1_1.png)
+
+Ahora esperamos a que se ejecute el workflow y podemos ver el resultado en la siguiente imagen:
+
+![Resultado del workflow en Github](../../../datos/imgs/dispatch1_2.png)

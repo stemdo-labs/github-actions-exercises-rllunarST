@@ -1,0 +1,21 @@
+name: "Seleccionar entorno (Dispatch) - RLLM"
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Por favor seleccione un entorno"
+        required: true
+        type: choice
+        options:
+          - production
+          - staging
+        default: staging
+
+jobs:
+  show-environment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrando entorno seleccionado
+        run: echo "EL entorno seleccionado: ${{ github.event.inputs.environment }}"
