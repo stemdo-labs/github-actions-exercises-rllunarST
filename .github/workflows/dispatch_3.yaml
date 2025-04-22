@@ -1,0 +1,22 @@
+name: "Confirmación (Dispatch) - RLLM"
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "¿Deseas continuar? (true o false)"
+        required: true
+        default: "false"
+
+jobs:
+  check-confirmation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Evaluando confirmación
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" = "true" ]; then
+            echo "Confirmación positiva!"
+          else
+            echo "Confirmación negativa!"
+          fi
