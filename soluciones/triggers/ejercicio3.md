@@ -20,5 +20,6 @@ jobs:
         run: echo "Has creado un nuevo issue en el repositorio"
 ```
 
-Ahora si creamos un nuevo issue en el repositorio, se ejecutará el workflow que acabamos de crear. En este caso, el workflow simplemente imprimirá un mensaje en la consola indicando que se ha creado un nuevo issue.
+Ahora si creamos un nuevo issue en el repositorio, se ejecutará el workflow que acabamos de crear. En este caso, el workflow simplemente imprimirá un mensaje en la consola indicando que se ha creado un nuevo issue como podemos ver en la siguiente imagen:
 
+![Ejercicio 3](../../datos/imgs/trigger3_1.png)

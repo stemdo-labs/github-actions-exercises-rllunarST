@@ -1,0 +1,17 @@
+name: "Triggers (Dispatch) - RLLM"
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: "Por favor escriba un mensaje personalizado"
+        required: true
+        default: "Hola desde GitHub Actions!"
+
+jobs:
+  imprimir-mensaje:
+    runs-on: labs-runner
+
+    steps:
+      - name: Mostrar mensaje ingresado
+        run: echo "${{ github.event.inputs.message }}"
