@@ -1,0 +1,10 @@
+name: "Trigger de pull request en una rama - RLLM"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  build:
+    runs-on: labs-runner
+    steps:
+      - run: echo "Se ha activado el trigger al abrir una pull request correctamente"
