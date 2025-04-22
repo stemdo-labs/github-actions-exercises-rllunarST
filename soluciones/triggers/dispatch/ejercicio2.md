@@ -32,5 +32,10 @@ jobs:
         run: echo "EL entorno seleccionado: ${{ github.event.inputs.environment }}"
 ```
 
-Ahora, al ejecutar el workflow manualmente, se nos presentará una opción para seleccionar entre los entornos "production" y "staging". Dependiendo de la opción seleccionada, se imprimirá el entorno correspondiente en la consola. Podemos ver desde actions el workflow para 
+Ahora, al ejecutar el workflow manualmente, se nos presentará una opción para seleccionar entre los entornos "production" y "staging". Dependiendo de la opción seleccionada, se imprimirá el entorno correspondiente en la consola. Podemos ver desde actions el workflow para iniciarlo manualmente y seleccionar el entorno.
 
+![Workflow desde Github Actions](../../../datos/imgs/dispatch2_1.png)
+
+Ahora podemos ver el resultado del workflow y el entorno seleccionado:
+
+![Resultado del workflow](../../../datos/imgs/dispatch2_2.png)
