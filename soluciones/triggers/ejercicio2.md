@@ -25,3 +25,10 @@ Esto significa que el workflow se activará cuando se haga un `push` a la rama `
 
 Haremos un push de prueba a la rama para comprobar su funcionamiento:
 
+!["Resultado del push con el trigger"](../../datos/imgs/trigger2_1.png)
+
+Como observamos al dirigirnos a nuestro repositorio y a la pestaña podemos ver que el workflow se ha ejecutado correctamente. Si hacemos clic sobre el workflow podremos ver cual workflow se ha ejecutado y si ha tenido éxito. Si hacemos clic sobre el paso podremos ver el resultado de la ejecución del mismo.
+
+!["Resultado del workflow desde actions"](../../datos/imgs/trigger2_2.png)
+
+Con esto estaría todo terminado y habremos activado nuestro segundo trigger.
