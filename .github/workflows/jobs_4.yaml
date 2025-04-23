@@ -1,0 +1,17 @@
+name: "Compartiendo archivos entre jobs - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  crear-archivo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Creando el archivo de prueba
+        run: echo "Este es un fichero de prueba de Roy" > test.txt
+
+  mover-archivo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Moviendo el archivo
+        run: mv test.txt testMovido.txt
