@@ -1,0 +1,22 @@
+name: "Usando Variables - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  variables-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Definiendo variables de entorno
+        run: echo "Variables definidas"
+        env:
+          NOMBRE: "Roy Lee"
+          CURSO: "GitHub Actions por Stemdo"
+
+      - name: Usando las variables de entorno
+        run: |
+          echo "Hola, me llamo ${{ NOMBRE }} y estoy aprendiendo ${{ CURSO }}"
+        env:
+          NOMBRE: Roy
+          CURSO: GitHub Actions

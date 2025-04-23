@@ -29,10 +29,10 @@ jobs:
 
 Ahora si hacemos un pull request de prueba que contenga la palabra 'urgent' en el título, podemos ver el resultado de la ejecución de este workflow en la pestaña de `Actions` de nuestro repositorio.
 
-![Resultado del workflow si la palabra contiene urgent](../../datos/imgs/context3_1.png)
+![Resultado del workflow si la palabra contiene urgent](../../datos/imgs/context4_1.png)
 
 Como podemos ver en la imagen, si el título de la pull request contiene la palabra 'urgent' el workflow se ejecuta correctamente y nos imprime el título y cuerpo de la pull request.
 
-![Resultado del workflow si la palabra NO contiene urgent](../../datos/imgs/context3_2.png)
+![Resultado del workflow si la palabra NO contiene urgent](../../datos/imgs/context4_2.png)
 
 Como podemos ver en la imagen, si el título de la pull request no contiene la palabra 'urgent' el workflow falla.
