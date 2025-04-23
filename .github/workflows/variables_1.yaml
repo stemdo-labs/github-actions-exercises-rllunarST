@@ -16,7 +16,7 @@ jobs:
 
       - name: Usando las variables de entorno
         run: |
-          echo "Hola, me llamo ${{ NOMBRE }} y estoy aprendiendo ${{ CURSO }}"
+          echo "Hola, me llamo $NOMBRE y estoy aprendiendo $CURSO"
         env:
           NOMBRE: Roy
           CURSO: GitHub Actions
