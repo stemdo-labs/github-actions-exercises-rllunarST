@@ -1,0 +1,29 @@
+name: "Workflow con tareas básicas - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  basic-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrando la fecha y hora actual
+        run: date
+
+      - name: Creando un archivo de texto
+        run: echo "Hecho por Roy" > archivoWorkflowRLLM.txt
+
+      - name: Listando archivos en el directorio actual
+        run: ls -l
+
+      - name: Configurar Git para el commit
+        run: |
+          git config --global user.name "rllunarST"
+          git config --global user.email "
+
+      - name: Haciendo commit y push de los archivos
+        run: |
+          git add archivoWorkflowRLLM.txt
+          git commit -m "Agregando archivo desde github actions"
+          git push origin/soluciones-rllm
