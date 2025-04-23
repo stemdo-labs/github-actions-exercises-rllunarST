@@ -41,3 +41,10 @@ En este caso, el primer job sube el artefacto y el segundo job lo descarga y mue
 
 Podemos ver el resultado de la ejecución de los jobs a continuación:
 
+![Ejecución de las tareas del workflow](../../datos/imgs/action3_1.png)
+
+Ahora si abrimos cada tarea veremos el resultado de la ejecución de cada una de ellas:
+
+![Tareas del workflow](../../datos/imgs/action3_2.png)
+
+Con esto hemos logrado subir un artefacto y luego descargarlo y mostrar su contenido en una tarea posterior como lo solicita el ejercicio.

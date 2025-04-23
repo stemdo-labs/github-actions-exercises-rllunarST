@@ -9,23 +9,23 @@ name: "Información del runner - RLLM"
 
 on:
   workflow_dispatch:
-
+ 
 jobs:
   runner-info:
     runs-on: labs-runner
-
     steps:
       - name: Mostrando información del runner
-        run: echo "Sistema Operativo: $RUNNER_OS"
-        env:
-          RUNNER_OS: ${{ runner.os }}
-
+        shell: bash
+        run: |
+          echo "Sistema Operativo: ${{ runner.os }}"
+     
       - name: Mostrando arquitectura del runner
-        run: echo "Arquitectura: $RUNNER_ARCH"
-        env:
-          RUNNER_ARCH: ${{ runner.arch }}
-
+        shell: bash
+        run: |
+          echo "Arquitectura: ${{ runner.arch }}"
+ 
       - name: Mostrando espacio disponible del disco del runner
+        shell: bash
         run: df -h
 ```
 
@@ -33,3 +33,6 @@ Como podemos observar en nuestro workflow usamos las variables de contexto `RUNN
 
 El resultado de la ejecución del workflow es el siguiente:
 
+![Resultado final del workflow](../../datos/imgs/context1_1.png)
+
+Con esto ya obtuvimos la información del runner en el que se está ejecutando el job como solicita el ejercicio.

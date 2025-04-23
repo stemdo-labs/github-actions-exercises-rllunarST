@@ -1,0 +1,17 @@
+name: "Despliegue según rama - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  despliegue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Decidir entorno por rama
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "Desplegando a producción con clave: ${{ secrets.PROD_API_KEY }}"
+          else
+            echo "Desplegando a staging con clave: ${{ secrets.STAGING_API_KEY }}"
+          fi

@@ -21,3 +21,7 @@ jobs:
 ```
 
 Este workflow se ejecutará todos los días a las 12:00 UTC y simplemente imprimirá el mensaje "Scheduled job executed!" en la consola. Schedule nos permite programar la ejecución de un workflow en función de una expresión cron. En este caso, la expresión `0 12 * * *` indica que el workflow se ejecutará todos los días a las 12:00 UTC.
+
+Este es el resultado del workflow:
+
+![Resultado del trigger diario](../../datos/imgs/trigger4_1.png)
