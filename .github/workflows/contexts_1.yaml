@@ -2,20 +2,22 @@ name: "Información del runner - RLLM"
 
 on:
   workflow_dispatch:
-
+ 
 jobs:
   runner-info:
     runs-on: labs-runner
-
     steps:
       - name: Mostrando información del runner
         shell: bash
-        run: echo "Sistema Operativo: ${{ runner.os }}"
-
+        run: |
+          echo "Sistema Operativo: ${{ runner.os }}"
+     
       - name: Mostrando arquitectura del runner
         shell: bash
-        run: echo "Arquitectura: ${{ runner.arch }}"
-
+        run: |
+          echo "Arquitectura: ${{ runner.arch }}"
+ 
       - name: Mostrando espacio disponible del disco del runner
         shell: bash
         run: df -h
+ 
