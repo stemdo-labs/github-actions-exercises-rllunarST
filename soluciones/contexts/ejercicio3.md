@@ -27,3 +27,6 @@ jobs:
 
 Podemos ver el resultado de la ejecución de este workflow en la pestaña de `Actions` de nuestro repositorio.
 
+![Resultado de la ejecución del workflow](../../datos/imgs/context3_1.png)
+
+Como podemos ver en la imagen, el workflow se ejecuta correctamente y nos imprime la URL, el estado del job y el nombre del evento que lo desencadenó.
