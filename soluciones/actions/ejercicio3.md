@@ -31,6 +31,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: archivo-subido
+          path: archivo-subido
 
       - name: Mostrar contenido del archivo
         run: cat archivo-subido/archivoWorkflowRLLM.txt
@@ -38,4 +39,5 @@ jobs:
 
 En este caso, el primer job sube el artefacto y el segundo job lo descarga y muestra su contenido.
 
-Podemos ver el resultado de la ejecución de los jobs a continuación
+Podemos ver el resultado de la ejecución de los jobs a continuación:
+
