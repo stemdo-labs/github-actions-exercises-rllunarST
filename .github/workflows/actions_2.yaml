@@ -5,7 +5,7 @@ on:
 
 jobs:
   mostrar-autor:
-    runs-on: labs-runner
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout del repositorio
