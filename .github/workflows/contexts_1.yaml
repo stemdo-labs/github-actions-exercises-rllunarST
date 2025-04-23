@@ -9,12 +9,12 @@ jobs:
 
     steps:
       - name: Mostrando información del runner
-        run: echo "Sistema Operativo: $RUNNER_OS"
+        run: echo "Sistema Operativo: ${{RUNNER_OS}}"
         env:
           RUNNER_OS: ${{ runner.os }}
 
       - name: Mostrando arquitectura del runner
-        run: echo "Arquitectura: $RUNNER_ARCH"
+        run: echo "Arquitectura: ${{RUNNER_ARCH}}"
         env:
           RUNNER_ARCH: ${{ runner.arch }}
 
