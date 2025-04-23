@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
       - name: Mostrando la fecha y hora actual
         run: date
 
@@ -26,4 +29,4 @@ jobs:
         run: |
           git add archivoWorkflowRLLM.txt
           git commit -m "Agregando archivo desde github actions"
-          git push origin/soluciones-rllm
+          git push origin HEAD
