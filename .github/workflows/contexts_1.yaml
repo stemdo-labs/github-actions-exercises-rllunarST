@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Mostrando información del runner
-        run: echo "Sistema Operativo: ${{ RUNNER_OS }}"
+        run: echo "Sistema Operativo: ${{ runner.os }}"
 
       - name: Mostrando arquitectura del runner
-        run: echo "Arquitectura: ${{ RUNNER_ARCH }}"
+        run: echo "Arquitectura: ${{ runner.arch }}"
 
       - name: Mostrando espacio disponible del disco del runner
         run: df -h
