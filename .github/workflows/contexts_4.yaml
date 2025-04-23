@@ -1,0 +1,20 @@
+name: "Validación de Pull Request - RLLM"
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validando el titulo de la Pull Request
+        run: |        
+          if [[ "${{ github.event.pull_request.title }}" == *urgent* ]]; then
+            echo "El título tiene la palabra 'urgent'."
+            echo "El titulo de la Pull Request es: ${{ github.event.pull_request.title }}"
+            echo "El body de la Pull Request es: ${{ github.event.pull_request.body }}"
+          else
+            echo "El título no tiene la palabra 'urgent' terminando workflow"
+            exit 1
+          fi

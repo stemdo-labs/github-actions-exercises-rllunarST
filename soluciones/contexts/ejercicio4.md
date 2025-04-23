@@ -26,3 +26,7 @@ jobs:
             exit 1
           fi
 ```
+
+Ahora si hacemos un pull request de prueba que contenga la palabra 'urgent' en el título, podemos ver el resultado de la ejecución de este workflow en la pestaña de `Actions` de nuestro repositorio.
+
+![Resultado del workflow si la palabra contiene urgent](../../datos/imgs/context3_1.png)
