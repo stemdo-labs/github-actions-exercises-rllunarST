@@ -30,10 +30,10 @@ jobs:
 
 Ahora lo ejecutamos en githubs actions dentro de nuestro repositorio:
 
-![Ejecución del workflow](../../datos/imgs/jobs3_1.png)
+![Ejecución del workflow](../../datos/imgs/jobs4_1.png)
 
 Como podemos ver el primer job se ejecuta correctamente pero el segundo no. Si abrimos cada jobs podemos ver esa información en la consola.
 
-![Ejecución del workflow](../../datos/imgs/jobs3_2.png)
+![Ejecución del workflow](../../datos/imgs/jobs4_2.png)
 
 Ahora como podemos observar el error nos da la pista que es que el archivo no existe. Esto es porque cada job se ejecuta en un contenedor diferente y por lo tanto no comparten el mismo espacio de trabajo. Por lo que si queremos mover el fichero debemos hacerlo dentro del mismo job.

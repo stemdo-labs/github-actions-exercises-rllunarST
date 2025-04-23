@@ -1,0 +1,13 @@
+name: Action_1 - Creación de un fichero
+ 
+inputs:
+  mensaje:
+    description: El contenido que tendrá el archivo
+    required: true
+ 
+runs:
+  using: "composite"
+  steps:
+    - name: Crear archivo mensaje.txt
+      run: echo "${{ inputs.mensaje }}" > mensaje.txt
+      shell: bash
