@@ -27,6 +27,7 @@ jobs:
 
       - name: Haciendo commit y push de los archivos
         run: |
+          git pull origin HEAD
           git add archivoWorkflowRLLM.txt
           git commit -m "Agregando archivo desde github actions"
           git push origin HEAD
