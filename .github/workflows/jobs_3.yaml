@@ -1,0 +1,15 @@
+name: "Jobs en múltiples sistemas operativos - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Mostrar sistema operativo
+        run: echo "Estoy corriendo en ${{ matrix.os }}"
