@@ -54,3 +54,12 @@ Luego para poder hacer un commit y push de los archivos se configura el usuario 
 
 Ahora ejecutaremos el workflow para ver que inician las tareas que definimos del job como veremos en la siguiente imagen:
 
+![Ejecuciones de tarea ](../../datos/imgs/jobs1_1.png)
+
+![Ejecuciones de tarea parte 2](../../datos/imgs/jobs1_2.png)
+
+Como podemos ver se ejecutaron todas las tareas que definimos en el job sin problemas. En la siguiente imagen podemos ver el commit que se hizo al repositorio:
+
+![Commit hecho en el repositorio gracias al workflow](../../datos/imgs/jobs1_3.png)
+
+Como podemos ver el commit se realizó perfectamente en nuestro repositorio demostrando que con github actions podemos automatizar tareas como lo es un commit de forma rapida y sencilla.
