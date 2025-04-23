@@ -1,0 +1,19 @@
+name: "Notificaciónes de Jobs - RLLM"
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  notificacion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ejecutando tarea ficticia
+        run: echo "Hola soy Roy y estoy ejecutando esta tarea"
+
+      - name: 
+        run: |
+          echo "Notifiación enviada a https://fake-webhook.url"
+          echo "El estado del Job es: ${{ job.status }}"
+          echo "Nombre del evento que me llamo: ${{ github.event_name }}"
