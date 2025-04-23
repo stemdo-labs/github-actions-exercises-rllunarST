@@ -4,6 +4,7 @@ runs:
   using: "composite"
   steps:
     - name: Mostrando autor
+      shell: bash
       run: |
         echo "El autor del último commit es:"
         git log -1 --pretty=format:'%an'
