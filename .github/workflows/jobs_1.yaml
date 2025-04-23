@@ -1,5 +1,8 @@
 name: "Workflow con tareas básicas - RLLM"
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
 
