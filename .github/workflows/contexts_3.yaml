@@ -1,20 +1,18 @@
-name: "Validación de Pull Request - RLLM"
+name: "Notificaciónes de Jobs - RLLM"
 
 on:
-  pull_request:
-    types: [opened]
+  workflow_dispatch:
 
 jobs:
-  check-title:
+  notificacion:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Validando el titulo de la Pull Request
-        run: |        
-          if [[ "${{ github.event.pull_request.title }}" == *urgent* ]]; then
-            echo "El título tiene la palabra 'urgent'."
-            echo "El titulo de la Pull Request es: ${{ github.event.pull_request.title }}"
-            echo "El body de la Pull Request es: ${{ github.event.pull_request.body }}"
-          else
-            echo "El título no tiene la palabra 'urgent' terminando workflow"
-            exit 1
-          fi
+      - name: Ejecutando tarea ficticia
+        run: echo "Hola soy Roy y estoy ejecutando esta tarea"
+
+      - name: Estado de la notificación
+        run: |
+          echo "Notifiación enviada a https://www.direccionfalsa.com"
+          echo "El estado del Job es: ${{ job.status }}"
+          echo "Nombre del evento que me llamo: ${{ github.event_name }}"
