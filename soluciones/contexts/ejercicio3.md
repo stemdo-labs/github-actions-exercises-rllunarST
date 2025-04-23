@@ -9,7 +9,6 @@ name: "Notificaciónes de Jobs - RLLM"
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   notificacion:

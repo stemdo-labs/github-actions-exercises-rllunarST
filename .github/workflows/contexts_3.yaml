@@ -2,7 +2,6 @@ name: "Notificaciónes de Jobs - RLLM"
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   notificacion:
@@ -14,6 +13,6 @@ jobs:
 
       - name: 
         run: |
-          echo "Notifiación enviada a https://fake-webhook.url"
+          echo "Notifiación enviada a https://www.direccionfalsa.com"
           echo "El estado del Job es: ${{ job.status }}"
           echo "Nombre del evento que me llamo: ${{ github.event_name }}"
