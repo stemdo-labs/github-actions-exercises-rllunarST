@@ -1,0 +1,15 @@
+name: "Mostrar autor del ultimo commit - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mostrar-autor:
+    runs-on: labs-runner
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Usando action personalizado
+        uses: ./.github/actions/ultimo-autor

@@ -1,0 +1,9 @@
+name: "Action - Mostrar autor del último commit - RLLM"
+description: "Este action imprime el nombre del autor del último commit"
+runs:
+  using: "composite"
+  steps:
+    - name: Mostrando autor
+      run: |
+        echo "El autor del último commit es:"
+        git log -1 --pretty=format:'%an'

@@ -47,3 +47,4 @@ Como podemos ver este workflow tiene un paso llamado `uses` que llama a la actio
 
 Si ejecutamos ahora el workflow podemos ver su funcionamiento. 
 
+![Workflow ejecutado desde github actions](../../datos/imgs/action1_1.png)
