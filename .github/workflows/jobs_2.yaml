@@ -1,0 +1,20 @@
+name: "Jobs y Steps - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Primer paso (Compilar)
+        run: |
+          echo "Compilando proyecto..."
+          # Puedes simular un error con: exit 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Despliegue
+        run: echo "El despliegue se realizó correctamente! La build fue exitosa!"
