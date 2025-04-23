@@ -34,3 +34,8 @@ Como podemos ver podemos hacer que en un workflow haya diferentes jobs y que cad
 
 Ahora probaremos el funcionamiento del workflow como podemos ver en la siguiente imagen:
 
+![Se ven los jobs del workflow](../../datos/imgs/jobs2_1.png)
+
+Podemos ver que hay multiples jobs y que el job `deploy` depende del job `build`. Pero si accedemos a cada job veremos que se inician los pasos que definimos en cada job como veremos en la siguiente imagen
+
+![Se ven los jobs del workflow](../../datos/imgs/jobs2_2.png)
