@@ -18,7 +18,7 @@ jobs:
       - name: Ejecutando tarea ficticia
         run: echo "Hola soy Roy y estoy ejecutando esta tarea"
 
-      - name: 
+      - name: Estado de la notificación
         run: |
           echo "Notifiación enviada a https://www.direccionfalsa.com"
           echo "El estado del Job es: ${{ job.status }}"
