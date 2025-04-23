@@ -38,3 +38,4 @@ jobs:
 
 Ahora comprobaremos su funcionamiento desde la pestaña de actions de nuestro repositorio. Al ejecutar el workflow, deberíamos ver en los logs el nombre del autor del último commit.
 
+![Resultado de la ejecución del workflow](../../datos/imgs/action2_1.png)

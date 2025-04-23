@@ -33,7 +33,7 @@ jobs:
           name: archivo-subido
 
       - name: Mostrar contenido del archivo
-        run: cat archivoWorkflowRLLM.txt
+        run: cat archivo-subido/archivoWorkflowRLLM.txt
 ```
 
 En este caso, el primer job sube el artefacto y el segundo job lo descarga y muestra su contenido.
