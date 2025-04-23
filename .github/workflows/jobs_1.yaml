@@ -20,7 +20,7 @@ jobs:
       - name: Configurar Git para el commit
         run: |
           git config --global user.name "rllunarST"
-          git config --global user.email "
+          git config --global user.email "rllunar@stemdo.io"
 
       - name: Haciendo commit y push de los archivos
         run: |
