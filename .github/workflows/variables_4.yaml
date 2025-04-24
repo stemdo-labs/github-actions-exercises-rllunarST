@@ -1,0 +1,44 @@
+name: "Validación y Despliegue (Variables) - RLLM"
+on:
+  push:
+    branches:
+      - main
+      - soluciones-rllm
+
+jobs:
+  validar-y-desplegar:
+    runs-on: labs-runner
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobando si existe y config del JSON
+        id: validar_config
+        run: |
+          if [ ! -f config.json ]; then
+            echo "El archivo config.json no existe"
+            exit 1
+          fi
+
+          if ! jq empty config.json 2>/dev/null; then
+            echo "El archivo config.json no tiene un formato valido"
+            exit 1
+          fi
+
+      - name: Extrayendo información del JSON
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' config.json)
+          echo "La version es: $VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Despliegue en producción
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Desplegando en producción con version: ${{ steps.version.outputs.version }}"
+
+      - name: Despliegue en desarrollo
+        if: github.ref == 'refs/heads/soluciones-rllm'
+        run: |
+          echo "Desplegando en desarrollo con version: ${{ steps.version.outputs.version }}"

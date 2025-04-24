@@ -33,4 +33,4 @@ jobs:
 
 Ahora si guardamos nuestro workflow y lo ejecutamos veremos el siguiente resultado:
 
-
+![Resultado del workflow funcionando](../../datos/imgs/variable3_1.png)
