@@ -1,0 +1,8 @@
+name: "Usar workflow que valida rama - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  llamar_a_reutilizable:
+    uses: ./.github/workflows/reusable_2_1.yaml
