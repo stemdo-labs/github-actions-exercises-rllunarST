@@ -36,7 +36,8 @@ jobs:
       var3: ${{ steps.setvar3.outputs.var3 }}
     steps:
       - name: Imprimir var2
-        run: echo "var2 es: $var2"
+        run: |
+          echo "El valor de var2 es: $var2"
 
       - name: Definir output var3
         id: setvar3
