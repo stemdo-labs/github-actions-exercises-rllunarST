@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Definiendo variables de entorno
         shell: bash
-        run: echo "NOMBRE=Roy" >> $GITHUB_ENV
-        run: echo "CURSO=GitHub Actions por Stemdo" >> $GITHUB_ENV
+        run: |
+         echo "NOMBRE=Roy" >> $GITHUB_ENV
+         echo "CURSO=GitHub Actions por Stemdo" >> $GITHUB_ENV
 
       - name: Usando las variables de entorno
         run: |
