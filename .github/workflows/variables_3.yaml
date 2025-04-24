@@ -8,7 +8,7 @@ jobs:
     runs-on: labs-runner
 
     steps:
-      - name: Generando número aleatorio
+      - name: Generar número y evaluar dentro del script
         run: |
           NUMR=$((RANDOM % 100 + 1))
           echo "Número generado: $NUMR"
