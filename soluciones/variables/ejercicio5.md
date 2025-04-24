@@ -50,13 +50,14 @@ jobs:
       - name: Variable local (JOB 1)
         run: |
           var1=1
-          echo "var1=$var1"
+          echo "El contenido de var1 es: $var1"
       
       - name: Variable de entorno (JOB 1)
         run: echo "var2=2" >> $GITHUB_ENV
 
       - name: Usando var2
-        run: echo "El contenido de var2 es: $var2"
+        run: |
+          echo "El contenido de var2 es: $var2"
 
   step_outputs_job2:
     runs-on: ubuntu-latest
@@ -96,3 +97,4 @@ jobs:
           echo "El nombre de la rama es: ${{ github.ref_name }}"
           echo "El nombre del evento que activo el workflow es: ${{ github.event_name }}"
 ```
+

@@ -87,7 +87,7 @@ on:
 
 jobs:
   validar-y-desplegar:
-    runs-on: labs-runner
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout del repositorio
