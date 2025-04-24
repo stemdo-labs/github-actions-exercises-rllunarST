@@ -5,4 +5,4 @@ on:
 
 jobs:
   usar_reutilizable:
-    uses: ./.github/workflows/reutilizable.yaml
+    uses: ./.github/workflows/reusable_1_1.yaml
