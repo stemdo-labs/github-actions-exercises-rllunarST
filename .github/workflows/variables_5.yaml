@@ -48,7 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Imprimiendo output var3
-        run: echo "El valor del output var3 es: ${{ needs.definir_output_job3.outputs.var3 }}"
+        run: | 
+          echo "El valor del output var3 es: ${{ needs.definir_output_job3.outputs.var3 }}"
 
   github_vars_job5:
     runs-on: ubuntu-latest
