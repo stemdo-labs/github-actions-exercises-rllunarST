@@ -1,0 +1,20 @@
+name: "Variable con condicional - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  numero-aleatorio:
+    runs-on: labs-runner
+
+    steps:
+      - name: Generando número aleatorio
+        run: |
+          NUMR=$((RANDOM % 100 + 1))
+          echo "Número generado: $NUMR"
+
+          if [ "$NUMR" -gt 50 ]; then
+            echo "El numero aleatorio $NUMR es mayor que 50"
+          else
+            echo "El numero aleatorio $NUMR es menor que 50"
+          fi

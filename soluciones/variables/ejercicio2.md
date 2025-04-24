@@ -24,6 +24,4 @@ Ahora creamos el secreto:
 
 Ahora si hacemos la ejecución del workflow, veremos que el secreto se ha mostrado en la salida del job:
 
-![Mostrando el secreto por consola](../../datos/imgs/variable2_1.png)
-
-Como tal el secreto no se muestra, pero porque es un secreto y estos no se pueden mostrar en la consola.
+![Mostrando el secreto por consola](../../datos/imgs/variable2_2.png)
