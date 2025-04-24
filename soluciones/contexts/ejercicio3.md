@@ -19,6 +19,7 @@ jobs:
         run: echo "Hola soy Roy y estoy ejecutando esta tarea"
 
       - name: Estado de la notificación
+        if: always()
         run: |
           echo "Notifiación enviada a https://www.direccionfalsa.com"
           echo "El estado del Job es: ${{ job.status }}"
