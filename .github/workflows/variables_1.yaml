@@ -9,14 +9,10 @@ jobs:
 
     steps:
       - name: Definiendo variables de entorno
-        run: echo "Variables definidas"
-        env:
-          NOMBRE: "Roy Lee"
-          CURSO: "GitHub Actions por Stemdo"
+        shell: bash
+        run: echo "NOMBRE=Roy" >> $GITHUB_ENV
+        run: echo "CURSO=GitHub Actions por Stemdo" >> $GITHUB_ENV
 
       - name: Usando las variables de entorno
         run: |
           echo "Hola, me llamo $NOMBRE y estoy aprendiendo $CURSO"
-        env:
-          NOMBRE: Roy
-          CURSO: GitHub Actions
