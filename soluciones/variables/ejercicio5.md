@@ -67,7 +67,8 @@ jobs:
         run: echo "var_step_output=valor" >> $GITHUB_OUTPUT
 
       - name: Usando output
-        run: echo "El valor de var_step_output es: ${{ steps.paso1.outputs.var_step_output }}"
+        run: |
+         echo "El valor de var_step_output es: ${{ steps.paso1.outputs.var_step_output }}"
 
   definir_output_job3:
     runs-on: ubuntu-latest
@@ -75,7 +76,8 @@ jobs:
       var3: ${{ steps.setvar3.outputs.var3 }}
     steps:
       - name: Imprimir var2
-        run: echo "var2 es: $var2"
+        run: |
+          echo "El valor de var2 es: $var2"
 
       - name: Definir output var3
         id: setvar3
@@ -86,7 +88,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Imprimiendo output var3
-        run: echo "El valor del output var3 es: ${{ needs.definir_output_job3.outputs.var3 }}"
+        run: | 
+          echo "El valor del output var3 es: ${{ needs.definir_output_job3.outputs.var3 }}"
 
   github_vars_job5:
     runs-on: ubuntu-latest
@@ -98,3 +101,22 @@ jobs:
           echo "El nombre del evento que activo el workflow es: ${{ github.event_name }}"
 ```
 
+Como podremos ver en las imagenes a continuación tenemos los resultados de cada uno de los jobs:
+
+### Job 1 y 2
+
+![Resultados de los jobs 1 y 2](../../datos/imgs/variable5_1.png)
+
+Como podemos ver en la imagen anterior, el job 1 imprimimos la variable local ``var1`` y la variable de entorno ``var2`` y en el job 2 se imprime el output ``var_step_output`` que definimos en el job 2.
+
+### Job 3 y 4
+
+![Resultados de los jobs 3 y 4](../../datos/imgs/variable5_2.png)
+
+Como podremos ver en la imagen anterior, el job 3 no tiene acceso a la variable ``var2`` definida en el job 1, ya que no se ha definido como output. En el job 4 si podemos acceder a la variable ``var3`` ya que se ha definido como output en el job 3.
+
+### Job 5
+
+![Resultados de los jobs 5](../../datos/imgs/variable5_3.png)
+
+Como podemos ver en la imagen anterior, el job 5 imprime las variables predefinidas por GitHub. Estas variables son muy útiles para obtener información sobre el contexto en el que se está ejecutando el workflow.
