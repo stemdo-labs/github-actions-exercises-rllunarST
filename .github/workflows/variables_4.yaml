@@ -14,7 +14,8 @@ jobs:
         uses: actions/checkout@v4
     
       - name: Crear config.json (para pruebas)
-        run: echo '{"nombre": "Roy Lee Lunar","version":"1.2.3"}' > config.json
+        run: |
+          echo '{"nombre": "Roy Lee Lunar","version":"1.2.3"}' > config.json
 
       - name: Comprobando si existe y config del JSON
         id: validar_config
