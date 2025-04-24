@@ -41,3 +41,8 @@ jobs:
     uses: ./.github/workflows/reusable_2_1.yaml
 ```
 
+Ahora si guardamos nuestro workflow y lo ejecutamos podremos ver el siguiente resultado pro la consola del github actions:
+
+![Resultado del workflow en github actions](../../datos/imgs/reusable2_1.png)
+
+Como podremos ver el workflow da error, pero esto se debe a que no existe la rama "feature/" entonces nos da error y no ejecuta la tarea principal como lo solicita la actividad.
