@@ -19,18 +19,16 @@ jobs:
 
     steps:
       - name: Definiendo variables de entorno
-        run: echo "Variables definidas"
-        env:
-          NOMBRE: "Roy Lee"
-          CURSO: "GitHub Actions por Stemdo"
+        shell: bash
+        run: echo "NOMBRE=Roy" >> $GITHUB_ENV
+        run: echo "CURSO=GitHub Actions por Stemdo" >> $GITHUB_ENV
 
       - name: Usando las variables de entorno
         run: |
-          echo "Hola, me llamo ${{ NOMBRE }} y estoy aprendiendo ${{ CURSO }}"
-        env:
-          NOMBRE: Roy
-          CURSO: GitHub Actions
+          echo "Hola, me llamo $NOMBRE y estoy aprendiendo $CURSO"
 ```
 
-Si ahora ejecutamos el workflow, veremos que se ejecuta correctamente y nos devuelve el siguiente resultado:
+Como podemos ver con un echo definimos las variables de entorno y luego las usamos en el segundo step. En este caso, el comando `echo` imprime un saludo que incluye el nombre y el curso. El resultado de la ejecución del workflow es el siguiente:
+
+
 

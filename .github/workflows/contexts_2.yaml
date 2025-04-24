@@ -8,7 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
       - name: Decidir entorno por rama
+        shell: bash
         run: |
           if [ "${{ github.ref_name }}" = "main" ]; then
             echo "Desplegando a producción con clave: ${{ secrets.PROD_API_KEY }}"
