@@ -130,4 +130,4 @@ jobs:
 
 Ahora si lo ejecutamos el workflow funcionará correctamente y nos mostrará el siguiente resultado:
 
-![Resultado correcto del workflow](../../datos/imgs/variable4_2.png)
+![Resultado correcto del workflow para desarrollo](../../datos/imgs/variable4_2.png)

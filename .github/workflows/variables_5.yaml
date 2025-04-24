@@ -27,7 +27,8 @@ jobs:
         run: echo "var_step_output=valor" >> $GITHUB_OUTPUT
 
       - name: Usando output
-        run: echo "El valor de var_step_output es: ${{ steps.paso1.outputs.var_step_output }}"
+        run: |
+         echo "El valor de var_step_output es: ${{ steps.paso1.outputs.var_step_output }}"
 
   definir_output_job3:
     runs-on: ubuntu-latest
