@@ -9,4 +9,5 @@ jobs:
     steps:
       - name: Mostrando el mensaje con el secreto
         shell: bash
-        run: echo "Este es el secreto: ${{ secrets.SECRETO_DE_ROY }}"
+        run: |
+         echo "Este es el secreto: ${{ secrets.SECRETO_DE_ROY }}"
