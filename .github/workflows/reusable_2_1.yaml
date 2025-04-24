@@ -1,0 +1,21 @@
+name: "Validando rama (Reusable) - RLLM"
+
+on:
+  workflow_call:
+
+jobs:
+  validar_y_ejecutar:
+    runs-on: labs-runner
+    steps:
+      - name: Validando si la rama empieza con 'feature/'
+        id: validar
+        run: |
+          echo "La rama actual es: $GITHUB_REF_NAME"
+          if [[ "${{ github.ref_name }}" != feature/* ]]; then
+            echo "Esta rama no es correcta, la rama permitida es 'feature/*'."
+            exit 1
+          fi
+
+      - name: Ejecutando tarea principal
+        if: success()
+        run: echo "Rama correcta. Ejecutando tarea principal"

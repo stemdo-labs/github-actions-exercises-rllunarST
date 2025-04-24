@@ -37,3 +37,6 @@ jobs:
 
 Si lo ejecutamos ahora veremos el siguiente resultado:
 
+![Resultado de la ejecución del workflow reutilizable](../../datos/imgs/reusable1_1.png)
+
+Como podemos ver, el workflow reutilizable se ha ejecutado correctamente y se imprimió dentro del workflow que lo llama el mensaje.
