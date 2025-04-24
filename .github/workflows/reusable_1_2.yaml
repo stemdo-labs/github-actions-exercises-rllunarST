@@ -1,0 +1,8 @@
+name: "Usando Workflow Reutilizable - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  usar_reutilizable:
+    uses: ./.github/workflows/reutilizable.yaml
