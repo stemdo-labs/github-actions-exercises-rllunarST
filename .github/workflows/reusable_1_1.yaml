@@ -1,0 +1,11 @@
+name: "Workflow Reutilizable - RLLM"
+
+on:
+  workflow_call:
+
+jobs:
+  imprimir_mensaje:
+    runs-on: labs-runner
+    steps:
+      - name: Imprimiendo mensaje
+        run: echo "¡Hola soy Roy desde un workflow reutilizable!"
