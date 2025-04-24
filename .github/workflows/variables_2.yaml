@@ -1,0 +1,11 @@
+name: "Usando secretos - RLLM"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  usar-secreto:
+    runs-on: labs-runner
+    steps:
+      - name: Mostrando el mensaje con el secreto
+        run: echo "Este es el secreto: ${{ secrets.SECRETO_DE_ROY }}"

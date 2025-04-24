@@ -30,5 +30,7 @@ jobs:
 
 Como podemos ver con un echo definimos las variables de entorno y luego las usamos en el segundo step. En este caso, el comando `echo` imprime un saludo que incluye el nombre y el curso. El resultado de la ejecución del workflow es el siguiente:
 
+![Probando las variables](../../datos/imgs/variable1_1.png)
 
+Como podemos ver el mensaje se imprime correctamente con el nombre y el curso que definimos en el primer step.
 
