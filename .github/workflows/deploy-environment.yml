@@ -1,13 +1,12 @@
 name: "Seleccionar entorno (Reusable) - RLLM"
 
 on:
-    workflow_call:
+   workflow_call:
       inputs:
         environment:
           required: true
           type: string
-
-  jobs:
+jobs:
     deploy:
       runs-on: labs-runner
       environment: ${{ inputs.environment }}
