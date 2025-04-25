@@ -10,7 +10,7 @@ on:
 
 jobs:
   escoger-entorno:
-    runs-on: labs-runner
+    runs-on: ubuntu-latest
 
     outputs:
       entorno: ${{ steps.seleccion.outputs.entorno }}
