@@ -101,7 +101,7 @@ jobs:
             echo "entorno=production" >> $GITHUB_OUTPUT
           elif [[ "${GITHUB_REF##*/}" == "develop" ]]; then
             echo "entorno=development" >> $GITHUB_OUTPUT
-          elif [[ "${GITHUB_REF##*/}" == release/* ]]; then
+          elif [[ "${GITHUB_REF#refs/heads/}" == release/* ]]; then
             echo "entorno=staging" >> $GITHUB_OUTPUT
           else
             echo "La rama que escogiste no es válida para el despliegue."
@@ -119,3 +119,24 @@ Como podemos ver en el workflow definimos una variable de output llamada entorno
 
 Guardaremos ahora los cambios y probaremos el workflow para ver si funciona correctamente, el resultado los veremos en las siguientes imagenes:
 
+### Resultado para la rama release/v1:
+
+Si hacemos un push a la rama release/v1, el workflow se ejecutará y llamará al reusable con el entorno staging.
+
+![Resultado de release](../../datos/imgs/reusable3_3.png)
+
+Como podemos ver nos muestra el entorno staging y las variables de entorno que son la url y el log level.
+
+### Resultado para la rama develop:
+
+![Resultado de develop](../../datos/imgs/reusable3_4.png)
+
+Si hacemos un push a la rama develop, el workflow se ejecutará y llamará al reusable con el entorno development y veremos los valores definidos para ese entorno.
+
+### Resultado para la rama main:
+
+![Resultado de main](../../datos/imgs/reusable3_5.png)
+
+Por ultimo este entorno es el de producción, y como podemos ver nos muestra los valores definidos para ese entorno.
+
+Como podremos ver los workflow funcionan correctamente y nos permiten desplegar entornos y usar variables de entorno según la rama en la que hayamos hecho un push este workflow ignorará las ramas que no se encuentran en la lista de ramas disponibles para el despliegue y en caso que se ejecute manualmente dará error si no se le pasa un entorno válido.
