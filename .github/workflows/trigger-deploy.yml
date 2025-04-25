@@ -35,4 +35,4 @@ jobs:
     needs: escoger-entorno
     uses: ./.github/workflows/deploy-environment.yml
     with:
-      environment: ${{ needs.seleccionar-entorno.outputs.entorno }}
+      environment: ${{ needs.escoger-entorno.outputs.entorno }}
