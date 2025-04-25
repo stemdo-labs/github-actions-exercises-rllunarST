@@ -33,4 +33,3 @@ Como podemos ver con un echo definimos las variables de entorno y luego las usam
 ![Probando las variables](../../datos/imgs/variable1_1.png)
 
 Como podemos ver el mensaje se imprime correctamente con el nombre y el curso que definimos en el primer step.
-

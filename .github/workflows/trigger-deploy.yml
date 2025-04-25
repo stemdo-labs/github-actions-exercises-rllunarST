@@ -1,0 +1,38 @@
+name: "Desplegando rama - RLLM"
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'release/*'
+  workflow_dispatch:
+
+jobs:
+  escoger-entorno:
+    runs-on: labs-runner
+
+    outputs:
+      entorno: ${{ steps.seleccion.outputs.entorno }}
+
+    steps:
+      - name: Escogiendo entorno según rama
+        id: seleccion
+        run: |
+          echo "La rama actual es: ${GITHUB_REF##*/}"
+          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
+            echo "entorno=production" >> $GITHUB_OUTPUT
+          elif [[ "${GITHUB_REF##*/}" == "develop" ]]; then
+            echo "entorno=development" >> $GITHUB_OUTPUT
+          elif [[ "${GITHUB_REF##*/}" == release/* ]]; then
+            echo "entorno=staging" >> $GITHUB_OUTPUT
+          else
+            echo "La rama que escogiste no es válida para el despliegue."
+            exit 1
+          fi
+
+  llamar-workflow-reutilizable:
+    needs: escoger-entorno
+    uses: ./.github/workflows/deploy-environment.yml
+    with:
+      environment: ${{ needs.seleccionar-entorno.outputs.entorno }}
