@@ -24,7 +24,7 @@ jobs:
             echo "entorno=production" >> $GITHUB_OUTPUT
           elif [[ "${GITHUB_REF##*/}" == "develop" ]]; then
             echo "entorno=development" >> $GITHUB_OUTPUT
-          elif [[ "${GITHUB_REF##*/}" == release/* ]]; then
+          elif [[ "${GITHUB_REF#refs/heads/}" == release/* ]]; then
             echo "entorno=staging" >> $GITHUB_OUTPUT
           else
             echo "La rama que escogiste no es válida para el despliegue."
