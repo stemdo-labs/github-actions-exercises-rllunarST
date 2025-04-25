@@ -1,0 +1,25 @@
+name: "Seleccionar entorno (Reusable) - RLLM"
+
+on:
+   workflow_call:
+      inputs:
+        environment:
+          required: true
+          type: string
+jobs:
+    deploy:
+      runs-on: labs-runner
+      environment: ${{ inputs.environment }}
+  
+      steps:
+        - name: Mostrar entorno
+          run: |
+            echo "El entorno es: ${{ inputs.environment }}"
+            echo "EL valor de API_URL es: $API_URL"
+            echo "El valor de LOG_LEVEL es: $LOG_LEVEL"
+          env:
+            API_URL: ${{ vars.API_URL }}
+            LOG_LEVEL: ${{ vars.LOG_LEVEL }}
+  
+        - name: Desplegando entorno
+          run: echo "Desplegando el entorno ${{ inputs.environment }}..."
