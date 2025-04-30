@@ -5,7 +5,7 @@ inputs:
     description: El contenido que tendrá el archivo
     required: true
  
-runs:
+runs: 
   using: "composite"
   steps:
     - name: Crear archivo mensaje.txt
